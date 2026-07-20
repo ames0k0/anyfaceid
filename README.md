@@ -1,14 +1,22 @@
 # Any FaceID models ::: issue tracker
 
 Service to find where is he/she/it from
-- Hopefully answers to the question: What "Anime" is it ?!
+- Hopefully answers to the question: What "Anime"
+
+## Task Exec Flow
+```
+Bot -> image -> MinIO {TaskID}
+             -> BgTaskManager  -> DeepFace.find(TaskID, DataSet)
+    <----------------------------
+```
 
 ## User Interface (UI)
 - [ ] Bot
   - [ ] SNS
-    - [ ] Telegram
+    - [x] Telegram
+    - [ ] Discord
   - [ ] Handlers
-    - [ ] Image
+    - [x] Image
     - [ ] Text
     - [ ] Video (shorts)
 - [ ] Web
@@ -24,3 +32,8 @@ Service to find where is he/she/it from
     - [ ] Quiality
   - [ ] Video
     - [ ] Quality
+
+## Internal Services
+- [ ] DataSet Maker
+  - [ ] Anime
+    - [ ] Characters
